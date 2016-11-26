@@ -11,7 +11,7 @@ function getTimeRemaining(endtime){
   'hours': hours,
   'minutes': minutes,
   'seconds': seconds
-};
+	};
 }
 getTimeRemaining(deadline).minutes;
 
@@ -29,13 +29,13 @@ function updateClock(){
                     'hours: '+ t.hours + '<br>' +
                     'minutes: ' + t.minutes + '<br>' +
                     'seconds: ' + t.seconds;
-seconds  if(t.total<=0){
+    seconds  if(t.total<=0){
     clearInterval(timeinterval);
+    }
   }
-}
 
-updateClock(); // run function once at first to avoid delay
-var timeinterval = setInterval(updateClock,1000);
+  updateClock();
+  var timeinterval = setInterval(updateClock,1000);
 }
 
 initializeClock('clockdiv', deadline);
