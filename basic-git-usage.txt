@@ -1,0 +1,53 @@
+#Creating a new git repository locally
+echo "# turing-amsterdam" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+#Until here.
+
+
+
+#If you want to change some configs like email or so.
+git config --global --edit
+
+#Changing the default editor for git.
+git config --global core.editor "/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl -n -w"
+
+#Shows a list of past commits.
+git log
+
+
+#Adds a reference to a remote repo, for eg. on GitHub.
+git remote add origin git@github.com:miskahali/turing-amsterdam.git
+#In case you want to delete the reference from prev. step. (Doesn't delete anything you cannot redo.)
+git remote rm origin
+
+#When you want to push changes for the first time for a new branch.
+git push -u origin master
+
+#For setting up SSH keys.
+ssh-keygen -t rsa
+#It creates 2 files in homedir/.ssh folder. You should give the content of id_rsa.pub on GitHub, under settings/SSH as a new ssh key. Not the content of the id_rsa!
+cd .ssh/
+ls -la
+cat id_rsa.pub | pbcopy 
+
+#For every modification you do:
+git add README.md 
+git commit
+
+#Push your status of repo to remote. (Can happen it does not let you until you pull the changes, if someone else modified something.)
+git push
+#Pull changes.
+git pull
+
+#Deleting a file/folder
+rm README.md
+git add README.md
+
+#or simply
+
+git rm README.md
+
+#What is up.
+git status
