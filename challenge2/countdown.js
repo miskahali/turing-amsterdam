@@ -29,7 +29,7 @@ function updateClock(){
                     'hours: '+ t.hours + '<br>' +
                     'minutes: ' + t.minutes + '<br>' +
                     'seconds: ' + t.seconds;
-    seconds  if(t.total<=0){
+    if(t.total<=0){
     clearInterval(timeinterval);
     }
   }
