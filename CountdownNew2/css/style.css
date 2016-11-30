@@ -72,7 +72,7 @@ footer, header, hgroup, menu, nav, section, main {
 }
 
 body {
-  line-height: 1;
+  line-height: 2.0;
 }
 
 ol, ul {
@@ -345,7 +345,7 @@ em, i {
 
 p {
   font-family: "Open Sans", "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
-  margin: 0;
+  margin: 2rem;
   font-size: 1.4rem;
   line-height: 1.8;
   color: #939da5;
@@ -2102,5 +2102,5 @@ sup {
   }
 }
 #authors1 h1 {
-  color: black;
+  color: gray;
 }
